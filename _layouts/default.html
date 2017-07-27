@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Source+Code+Pro:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ site.path }}/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="{{ site.path }}/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="container">
+
+  <div class="text-center">
+    <img src="{{ site.path }}/img/leftjoinlabs-logo.svg" class="mx-auto"/>
+    <h1>{{ site.title }}</h1>
+    <p class="ljl-tagline">{{ site.description }}</p>
+    <p><a href="mailto:{{ site.email }}" class="ljl-email">{{ site.email }}</a></p>
+  </div>
+
+  <div class="content">
+    {{ content }}
+  </div>
+
+</div>
+
+</body>
+</html>
