@@ -1,43 +1,20 @@
 <div class="row justify-content-center">
 
-  <div class="col-lg-5">
-    <div class="row align-items-center">
+  {% for service in site.services %}
+    <div class="col-lg-5">
+      <div class="row align-items-center">
 
-      <div class="hidden-xs-down col-lg-12 col-2">
-        <img src="{{ site.path }}/img/heart-hands.svg" class="mx-auto d-block">
+        <div class="hidden-xs-down col-lg-12 col-2">
+          <img src="{{ site.path }}/img/{{ service.icon }}" class="mx-auto d-block">
+        </div>
+
+        <div class="col-lg-12 col">
+          <h3>{{ service.title }}</h3>
+          <div>{{ service.output }}</div>
+        </div>
+
       </div>
-
-      <div class="col-lg-12 col">
-        <h3>For non-profits:</h3>
-        <ul>
-          <li>Development of custom <a href="https://civicrm.org/extensions">extensions</a> which add features to CiviCRM
-          </li>
-          <li>Bug-fixes in CiviCRM core or other extensions</li>
-          <li>Training for your staff to use CiviCRM effectively</li>
-          <li>Data migration into CiviCRM</li>
-        </ul>
-      </div>
-
     </div>
-  </div>
-
-  <div class="col-lg-5">
-    <div class="row align-items-center">
-
-      <div class="hidden-xs-down col-lg-12 col-2">
-        <img src="{{ site.path }}/img/building.svg" class="mx-auto d-block">
-      </div>
-
-    <div class="col-lg-12 col">
-      <h3>For other service providers:</h3>
-      <ul>
-        <li>Sub-contracting for any of the non-profit services</li>
-        <li>Integration between CiviCRM and 3rd party applications</li>
-        <li>Technical writing to produce and publish documentation for your extension</li>
-        <li>Basic security auditing and pen-testing for your extension</li>
-      </ul>
-    </div>
-    </div>
-  </div>
+  {% endfor %}
 
 </div>
