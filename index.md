@@ -8,22 +8,22 @@ Left Join Labs is a small software development company which helps non-profit or
 
 {% include grid-sm.html items=site.services %}
 
-We that we do *not* offer CiviCRM hosting, but we are pleased to recommend [Megaphone Technology Consulting](https://www.megaphonetech.com/) for hosting, ongoing maintenance, and related support.
+We that Left Join Labs does *not* offer CiviCRM hosting. For hosting, ongoing maintenance, and related support please see [Megaphone Technology Consulting](https://www.megaphonetech.com/) or look at the full [list of CiviCRM experts](https://civicrm.org/partners-contributors).
 
-## How we work
+## Pricing
 
 * Fixed pricing
 * Free quotes
 
 
-## Who we are
+## People
 
 Left Join Labs is currently a one-person shop run by Sean Madsen.
 
 {% include grid-lg.html items=site.people %}
 
 
-## Contact us
+## Contact
 
 If you're ....
 

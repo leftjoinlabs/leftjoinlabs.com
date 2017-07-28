@@ -11,21 +11,30 @@
 
 <body>
 
+<div class="ljl-big-circle">
 
-<div class="container">
+  <div class="ljl-spacer-top"></div>
 
-  <div class="text-center">
-    <img src="{{ site.path }}/img/leftjoinlabs-logo.svg" class="mx-auto"/>
-    <h1>{{ site.title }}</h1>
-    <p class="ljl-tagline">{{ site.description }}</p>
-    <p><a href="mailto:{{ site.email }}" class="ljl-email">{{ site.email }}</a></p>
+  <div class="container">
+
+    <div class="ljl-header">
+      <img src="{{ site.path }}/img/leftjoinlabs-logo.svg" class="mx-auto"/>
+      <h1>{{ site.title }}</h1>
+      <p class="ljl-tagline">{{ site.description }}</p>
+      <p><a href="mailto:{{ site.email }}" class="ljl-email">{{ site.email }}</a></p>
+    </div>
+
+    <div class="content">
+      {{ content }}
+    </div>
+
   </div>
 
-  <div class="content">
-    {{ content }}
-  </div>
+  <div class="ljl-spacer-bottom"></div>
 
 </div>
+
+  <div class="ljl-footer">Footer</div>
 
 </body>
 </html>
