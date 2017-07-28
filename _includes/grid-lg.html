@@ -1,0 +1,16 @@
+{% for item in include.items %}
+  <div class="ljl-person">
+
+    <div class="col-sm-3">
+      <img src="{{ site.path }}/img/{{ item.icon }}" class="mx-auto d-block img-fluid">
+    </div>
+
+    <div class="col">
+      <h3>{{ item.title }}</h3>
+      <div>
+        {{ item.output }}
+      </div>
+    </div>
+
+  </div>
+{% endfor %}

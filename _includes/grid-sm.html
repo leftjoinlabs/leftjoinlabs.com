@@ -1,16 +1,16 @@
 <div class="row justify-content-center">
 
-  {% for service in site.services %}
+  {% for item in include.items %}
     <div class="col-lg-5">
       <div class="row align-items-center">
 
         <div class="hidden-xs-down col-lg-12 col-2">
-          <img src="{{ site.path }}/img/{{ service.icon }}" class="mx-auto d-block">
+          <img src="{{ site.path }}/img/{{ item.icon }}" class="mx-auto d-block">
         </div>
 
         <div class="col-lg-12 col">
-          <h3>{{ service.title }}</h3>
-          <div>{{ service.output }}</div>
+          <h3>{{ item.title }}</h3>
+          <div>{{ item.output }}</div>
         </div>
 
       </div>
