@@ -3,6 +3,12 @@
 
 @import 'bootstrap';
 
+
+// =========== Colors ===========
+
+// TODO
+
+
 // =========== Elements ===========
 
 body {
@@ -36,60 +42,126 @@ li {
 
 // Big circle
 
-.ljl-big-circle {
-  background: url('/img/big-circle-top.svg') no-repeat center top, url('/img/big-circle-bottom.svg') no-repeat center bottom, white;
+.ljl_big-circle {
+
+  background: url('/img/big-circle-top.svg')    no-repeat center top,
+              url('/img/big-circle-bottom.svg') no-repeat center bottom,
+              white;
   background-size: 100% auto, 100% auto;
+
+  > .ljl_spacer-top,
+  > .ljl_spacer-bottom {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  > .ljl_spacer-top {
+    width: 2%;
+    padding: 2%;
+  }
+
+  > .ljl_spacer-bottom {
+    width: 15%;
+    padding: 15%;
+  }
+
 }
 
-.ljl-big-circle > .ljl-spacer-top,
-.ljl-big-circle > .ljl-spacer-bottom {
-  box-sizing: border-box;
-  position: relative;
-}
 
-.ljl-big-circle > .ljl-spacer-top {
-  width: 3%;
-  padding: 3%;
-}
-
-.ljl-big-circle > .ljl-spacer-bottom {
-  width: 15%;
-  padding: 15%;
-}
 
 // Header
 
-.ljl-header {
+.ljl_header {
   @extend .text-center;
+
+  margin-top: 20px;
+
+  .ljl_tagline {
+    font-family: 'Courgette', cursive;
+    font-size: 18px;
+  }
+
+  .ljl_email {
+    padding: 5px;
+    border-radius: 5px;
+    color: #555;
+
+    &:hover {
+      background-color: #F7F7F7;
+      color: #555;
+      text-decoration: none;
+    }
+  }
+
 }
 
-.ljl-tagline {
-  font-family: 'Courgette', cursive;
-  font-size: 18px;
+// grid-sm
+
+.ljl_grid-sm {
+
+  @extend .row;
+  @extend .justify-content-center;
+
+  .ljl_item {
+    @extend .col-lg-5;
+
+    &-inner {
+      @extend .row;
+      @extend .align-items-center;
+    }
+
+    .ljl_graphic {
+      @extend .hidden-xs-down;
+      @extend .col-lg-12;
+      @extend .col-2;
+
+      img {
+        @extend .mx-auto;
+        @extend .d-block;
+      }
+    }
+
+    .ljl_content {
+      @extend .col-lg-12;
+      @extend .col;
+    }
+  }
 }
 
-.ljl-email {
-  padding: 5px;
-  border-radius: 5px;
-  color: #555;
-}
 
-.ljl-email:hover {
-  background-color: #F7F7F7;
-  color: #555;
-  text-decoration: none;
-}
 
-// Person
+// grid-lg
 
-.ljl-person {
+.ljl_grid-lg {
+
   @include make-row();
   @extend .align-items-center;
+
+  .ljl_graphic {
+    @extend .col-sm-3;
+    img {
+      @extend .mx-auto;
+      @extend .d-block;
+      @include img-fluid();
+      width: 150px;
+      border-radius: 50%;
+      border: solid #989898 3px;
+      margin: 10px;
+    }
+  }
+
+  .ljl_content {
+    @extend .col;
+  }
+
 }
 
-.ljl-person img {
-  width: 150px;
-  border-radius: 50%;
-  border: solid #989898 3px;
-  margin: 10px;
+
+// Footer
+
+.ljl_footer {
+  @extend .text-center;
+  color: #989898;
 }
+
+
