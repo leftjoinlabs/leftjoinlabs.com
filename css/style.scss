@@ -118,6 +118,8 @@ li {
       img {
         @extend .mx-auto;
         @extend .d-block;
+        margin-top: 5px;
+        margin-bottom: 15px;
       }
     }
 
@@ -161,7 +163,9 @@ li {
 
 .ljl_footer {
   @extend .text-center;
-  color: #989898;
+  color: #b4b4b4;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 
