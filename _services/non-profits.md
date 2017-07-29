@@ -1,6 +1,6 @@
 ---
 title: For non-profits
-icon: heart-hands.svg
+icon: icons/heart-hands.svg
 weight: 1
 ---
 

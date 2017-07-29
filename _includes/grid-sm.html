@@ -1,6 +1,7 @@
-<div class="ljl_grid-sm">
+<div class="ljl_grid-sm  {{ include.extra_classes }}">
 
-  {% for item in include.items %}
+  {% assign items = include.items | sort: 'weight' %}
+  {% for item in items %}
     <div class="ljl_item">
       <div class="ljl_item-inner">
 

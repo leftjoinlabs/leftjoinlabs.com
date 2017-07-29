@@ -1,5 +1,6 @@
-{% for item in include.items %}
-  <div class="ljl_grid-lg">
+{% assign items = include.items | sort: 'weight' %}
+{% for item in items %}
+  <div class="ljl_grid-lg {{ include.extra_classes }}">
 
     <div class="ljl_graphic">
       <img src="{{ site.path }}/img/{{ item.icon }}">

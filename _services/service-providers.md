@@ -1,6 +1,6 @@
 ---
 title: For other service providers
-icon: building.svg
+icon: icons/building.svg
 weight: 2
 ---
 
