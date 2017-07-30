@@ -245,7 +245,7 @@ $ljl_nav-height: 50px;
   @extend .justify-content-center;
 
   .ljl_item {
-    @extend .col-lg-5;
+    @extend .col-lg-6;
     margin-top: 1rem;
     margin-bottom: 1rem;
 
@@ -254,10 +254,16 @@ $ljl_nav-height: 50px;
       @extend .align-items-center;
     }
 
+    @include media-breakpoint-up(lg) {
+      .ljl_item-inner {
+        padding: 0 2em;
+      }
+    }
+
     .ljl_graphic {
-      @extend .hidden-xs-down;
       @extend .col-lg-12;
-      @extend .col-2;
+      @extend .col-sm-2;
+      @extend .col-12;
 
       img {
         @extend .mx-auto;
