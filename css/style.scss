@@ -4,15 +4,12 @@
 @import 'bootstrap';
 
 
-// =========== Colors ===========
-
-// TODO
-
 
 // =========== Elements ===========
 
 body {
   background: #f8f8f8;
+  position: relative; // For scrollspy
 }
 
 h1 { font-size: 2rem;}
@@ -36,9 +33,6 @@ h2 {
 li {
   margin-top: 0.5em;
 }
-
-// =========== Bootstrap overrides ===========
-
 
 
 
@@ -98,6 +92,46 @@ li {
   }
 
 }
+
+
+// Stickyfill
+// https://github.com/wilddeer/stickyfill
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+}
+
+
+
+// Navbar
+
+.navbar {
+
+  height: 50px;
+
+  .navbar-inner {
+    position: relative;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    position: absolute;
+  }
+
+  .nav-link.active {
+    background-color: white;
+  }
+
+}
+
+
 
 // grid-sm
 

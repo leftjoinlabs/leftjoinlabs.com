@@ -12,12 +12,15 @@
   <meta name="application-name" content="Left Join Labs">
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Courgette|Source+Code+Pro:400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{{ site.path }}/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="{{ site.path }}/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/stickyfill.min.js"></script>
+  <script src="/js/custom.js"></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="150">
 
 <div class="ljl_big-circle">
 
@@ -26,11 +29,49 @@
   <div class="container">
 
     <div class="ljl_header">
-      <img src="{{ site.path }}/img/leftjoinlabs-logo.svg" class="mx-auto"/>
-      <h1>{{ site.title }}</h1>
+      <img src="/img/leftjoinlabs-logo.svg" class="mx-auto"/>
+      <h1 id="{{ site.title | slugify }}">{{ site.title }}</h1>
       <p class="ljl_tagline">{{ site.description }}</p>
       <p>{% include email.html %}</p>
     </div>
+
+  </div>
+
+
+  <nav class="navbar navbar-toggleable-sm sticky">
+
+    <div class="navbar-inner">
+
+      <button class="navbar-toggler navbar-toggler-right"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#" title="{{ site.title }}">
+        <img src="/img/leftjoinlabs-logo.svg" height="40">
+      </a>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <ul class="navbar-nav nav-pills nav-stacked">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#business-model">Business model</a></li>
+          <li class="nav-item"><a class="nav-link" href="#people">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <div class="container">
 
     <div class="content">
       {{ content }}
