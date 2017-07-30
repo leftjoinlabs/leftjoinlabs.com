@@ -13,11 +13,6 @@
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Courgette|Source+Code+Pro:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/stickyfill.min.js"></script>
-  <script src="/js/custom.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="150">
@@ -37,8 +32,7 @@
 
   </div>
 
-
-  <nav class="navbar navbar-toggleable-sm sticky">
+  <nav class="navbar navbar-toggleable-sm sticky-top">
 
     <div class="navbar-inner">
 
@@ -83,7 +77,9 @@
 
 </div>
 
-  <div class="ljl_footer">© {{ site.title }}, {{ 'now' | date: "%Y" }}</div>
+<div class="ljl_footer">© {{ site.title }}, {{ 'now' | date: "%Y" }}</div>
+
+{% include footer-scripts.html %}
 
 </body>
 </html>
