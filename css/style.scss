@@ -62,6 +62,20 @@ li {
 }
 
 
+// =========== stickyfill ===========
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sticky:before,
+.sticky:after {
+  content: '';
+  display: table;
+}
+
 
 // =========== Custom ===========
 
@@ -84,7 +98,6 @@ $ljl_nav-height: 50px;
   height: $ljl_nav-height;
   background: $ljl_grey-01;
   border-bottom: 2px solid $ljl_grey-02a;
-  @extend .sticky-top;
   z-index: 1;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
 
@@ -108,7 +121,6 @@ $ljl_nav-height: 50px;
   @extend .navbar;
   @extend .navbar-toggleable-sm;
   @extend .navbar-light;
-  @extend .sticky-top;
   padding: 0;
   height: $ljl_nav-height;
   margin-top: -2 * $ljl_nav-height;
