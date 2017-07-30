@@ -229,18 +229,28 @@ $ljl_nav-height: 50px;
 // Footer
 
 .ljl_footer {
-  @extend .text-center;
-  color: $ljl_grey-03;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
 
-  background: url('/img/big-circle-bottom.svg') no-repeat center bottom;
-  background-size: 100% auto;
-  > .ljl_spacer {
-    box-sizing: border-box;
-    position: relative;
-    width: 8%;
-    padding: 8%;
+  .ljl_footer-image {
+    margin-top: 2rem;
+    background: url('/img/big-circle-bottom.svg') no-repeat center bottom;
+    background-size: 100% auto;
+    > .ljl_spacer {
+      box-sizing: border-box;
+      position: relative;
+      width: 6%;
+      padding: 6%;
+    }
+  }
+
+  .ljl_footer-content {
+    background: $ljl_grey-02;
+    padding: 3rem 0;
+  }
+
+  .content {
+    @extend .text-center;
+    color: $ljl_grey-03;
+    //padding-top: 3rem;
   }
 
 }
