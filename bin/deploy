@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
+set -e
+set -u
+
 PROJDIR=$( cd "$(dirname "$0")" ; cd ../ ; pwd -P )
+cd $PROJDIR
+jekyll build
 
 rsync -avhz --delete "$PROJDIR/" sean:leftjoinlabs.com
 
