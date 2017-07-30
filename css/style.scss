@@ -107,12 +107,19 @@ $ljl_nav-height: 50px;
 .ljl_nav {
   @extend .navbar;
   @extend .navbar-toggleable-sm;
+  @extend .navbar-light;
   @extend .sticky-top;
+  padding: 0;
   height: $ljl_nav-height;
   margin-top: -2 * $ljl_nav-height;
   z-index: 3;
   margin-left:  1.5*$ljl_nav-height; // expose logo
-  margin-right: 1.5*$ljl_nav-height; // be symmetrical
+
+  .navbar-nav {
+    // be symmetrical with above margin-left setting, but do it here so that
+    // hamburger menu is right aligned
+    margin-right: 1.5*$ljl_nav-height;
+  }
 
   .nav-item {
     margin-top: 0;
@@ -126,6 +133,17 @@ $ljl_nav-height: 50px;
       background: white;
       color: black;
     }
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  // hamburger menu
+  $navbar-togger-margin: 5px;
+  .navbar-toggler {
+    height: $ljl_nav-height - (2 * $navbar-togger-margin);
+    margin: $navbar-togger-margin 0;
   }
 }
 
