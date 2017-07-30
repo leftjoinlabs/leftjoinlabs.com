@@ -88,7 +88,7 @@ li {
 
 $ljl_nav-height: 50px;
 
-.ljl_content,
+.ljl_main,
 .ljl_footer {
   position: relative;
   z-index: 0;
@@ -160,9 +160,23 @@ $ljl_nav-height: 50px;
 }
 
 @include media-breakpoint-down(sm) {
-  .ljl_nav {
 
-    //position: fixed; //TODO
+  .ljl_nav {
+    // swap z order so that .ljl_header hides .ljl_nav
+    z-index: 2 !important;
+  }
+  .ljl_header {
+    // swap z order so that .ljl_header hides .ljl_nav
+    z-index: 3 !important;
+  }
+  .ljl_main {
+    // Need more margin since we moved .ljl_nav up
+    margin-top: 2 * $ljl_nav-height;
+  }
+
+  .ljl_nav {
+    // Move up so that it's sufficiently hidden underneath the bg gradient of .ljl_header
+    margin-top: -5 * $ljl_nav-height;
 
     .navbar-nav {
       font-size: 1.3rem;
@@ -173,6 +187,7 @@ $ljl_nav-height: 50px;
       text-align: center;
     }
   }
+
 }
 
 .ljl_anchor {
