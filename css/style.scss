@@ -70,6 +70,12 @@ $ljl_nav-height: 50px;
   @extend .sticky-top;
   z-index: 1;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+
+  img {
+    height: 100%;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
 }
 
 .ljl_header {
@@ -88,6 +94,22 @@ $ljl_nav-height: 50px;
   height: $ljl_nav-height;
   margin-top: -2 * $ljl_nav-height;
   z-index: 3;
+  margin-left:  1.5*$ljl_nav-height; // expose logo
+  margin-right: 1.5*$ljl_nav-height; // be symmetrical
+
+  .nav-item {
+    margin-top: 0;
+  }
+
+  .nav-link {
+    padding: 0.25rem 1rem;
+    margin: 0 0.5rem;
+    color: $ljl_grey-04;
+    &.active {
+      background: white;
+      color: black;
+    }
+  }
 }
 
 
