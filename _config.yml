@@ -8,6 +8,7 @@ sass:
   sass_dir: css
   style:    expanded
 collections:
+- sections
 - services
 - people
 - model

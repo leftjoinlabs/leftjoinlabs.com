@@ -6,12 +6,12 @@
       <div class="ljl_item-inner">
 
         <div class="ljl_graphic">
-          <img src="{{ site.path }}/img/{{ item.icon }}">
+          <img src="/img/{{ item.icon }}">
         </div>
 
         <div class="ljl_content">
           <h3>{{ item.title }}</h3>
-          <div>{{ item.output }}</div>
+          <div>{{ item.content | markdownify }}</div>
         </div>
 
       </div>

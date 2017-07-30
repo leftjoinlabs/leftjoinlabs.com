@@ -3,13 +3,13 @@
   <div class="ljl_grid-lg {{ include.extra_classes }}">
 
     <div class="ljl_graphic">
-      <img src="{{ site.path }}/img/{{ item.icon }}">
+      <img src="/img/{{ item.icon }}">
     </div>
 
     <div class="ljl_content">
       <h3>{{ item.title }}</h3>
       <div>
-        {{ item.output }}
+        {{ item.content | markdownify }}
       </div>
     </div>
 

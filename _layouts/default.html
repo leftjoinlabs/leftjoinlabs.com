@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>{{ site.title }}</title>
+  <title>{{ site.title }} - {{ site.description }}</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -50,10 +50,12 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <ul class="navbar-nav nav-pills nav-stacked">
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#business-model">Model</a></li>
-        <li class="nav-item"><a class="nav-link" href="#people">People</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        {% assign sections = site.sections | sort: 'weight' %}
+        {% for section in sections %}
+          <li class="nav-item">
+            <a class="nav-link" href="#{{ section.menu | slugify }}">{{ section.menu }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </nav>
@@ -62,7 +64,14 @@
   <div class="ljl_content">
     <div class="container">
       <div class="content">
-        {{ content }}
+        {% assign sections = site.sections | sort: 'weight' %}
+        {% for section in sections %}
+          <a id="{{ section.menu | slugify }}" class="ljl_anchor"></a>
+          <h2>{{ section.title }}</h2>
+          <section>
+            {{ section.output }}
+          </section>
+        {% endfor %}
       </div>
     </div>
   </div>
