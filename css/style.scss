@@ -4,11 +4,20 @@
 @import 'bootstrap';
 
 
+// Colors
+
+$ljl_grey-01: #F7F7F7;
+$ljl_grey-02: #f8f8f8;
+$ljl_grey-03: #b4b4b4;
+$ljl_grey-04: #989898;
+$ljl_grey-05: #555;
+
+
 
 // =========== Elements ===========
 
 body {
-  background: #f8f8f8;
+  background: $ljl_grey-02;
   position: relative; // For scrollspy
 }
 
@@ -38,31 +47,44 @@ li {
 
 // =========== Custom ===========
 
-// Big circle
 
-.ljl_big-circle {
+.body-inner {
+  background: white;
+}
 
-  background: url('/img/big-circle-top.svg')    no-repeat center top,
-              url('/img/big-circle-bottom.svg') no-repeat center bottom,
-              white;
-  background-size: 100% auto, 100% auto;
+// Navbar
 
-  > .ljl_spacer-top,
-  > .ljl_spacer-bottom {
-    box-sizing: border-box;
-    position: relative;
-  }
+$ljl_nav-height: 50px;
 
-  > .ljl_spacer-top {
-    width: 2%;
-    padding: 2%;
-  }
+.ljl_content,
+.ljl_footer {
+  position: relative;
+  z-index: 0;
+}
 
-  > .ljl_spacer-bottom {
-    width: 8%;
-    padding: 8%;
-  }
+.ljl_nav-background {
+  height: $ljl_nav-height;
+  background: $ljl_grey-01;
+  @extend .sticky-top;
+  z-index: 1;
+}
 
+.ljl_header {
+  // Need to make sure header covers .ljl_nav-background before scrolling
+  margin-top: -$ljl_nav-height;
+  position: relative;
+  z-index: 2;
+  // Also want header to extend underneath .ljl_nav
+  padding-bottom: 2 * $ljl_nav-height;
+}
+
+.ljl_nav {
+  @extend .navbar;
+  @extend .navbar-toggleable-sm;
+  @extend .sticky-top;
+  height: $ljl_nav-height;
+  margin-top: -2 * $ljl_nav-height;
+  z-index: 3;
 }
 
 
@@ -70,9 +92,18 @@ li {
 // Header
 
 .ljl_header {
-  @extend .text-center;
 
-  margin-top: 20px;
+  background: url('/img/big-circle-top.svg') no-repeat center top,
+              linear-gradient(to top, rgba(255, 255, 255, 0), white 4*$ljl_nav-height, white);
+  background-size: 100% auto;
+  > .ljl_spacer {
+    box-sizing: border-box;
+    position: relative;
+    width: 2%;
+    padding: 2%;
+  }
+
+  @extend .text-center;
 
   .ljl_tagline {
     font-family: 'Courgette', cursive;
@@ -82,39 +113,17 @@ li {
   .ljl_email {
     padding: 5px;
     border-radius: 5px;
-    color: #555;
+    color: $ljl_grey-05;
 
     &:hover {
-      background-color: #F7F7F7;
-      color: #555;
+      background-color: $ljl_grey-01;
+      color: $ljl_grey-05;
       text-decoration: none;
     }
   }
 
 }
 
-
-
-// Navbar
-
-.navbar {
-
-  height: 50px;
-
-  .navbar-inner {
-    position: relative;
-    width: 100%;
-  }
-
-  .navbar-brand {
-    position: absolute;
-  }
-
-  .nav-link.active {
-    background-color: white;
-  }
-
-}
 
 
 
@@ -188,7 +197,7 @@ li {
 
 .ljl_people .ljl_graphic img {
   border-radius: 50%;
-  border: solid #989898 3px;
+  border: solid $ljl_grey-04 3px;
 }
 
 
@@ -196,9 +205,19 @@ li {
 
 .ljl_footer {
   @extend .text-center;
-  color: #b4b4b4;
+  color: $ljl_grey-03;
   margin-top: 2rem;
   margin-bottom: 4rem;
+
+  background: url('/img/big-circle-bottom.svg') no-repeat center bottom;
+  background-size: 100% auto;
+  > .ljl_spacer {
+    box-sizing: border-box;
+    position: relative;
+    width: 8%;
+    padding: 8%;
+  }
+
 }
 
 
