@@ -17,27 +17,44 @@ $ljl_grey-05: #555;
 
 // =========== Elements ===========
 
+
 body {
-  background: $ljl_grey-02;
-  position: relative; // For scrollspy
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
 }
-
-h1 { font-size: 2rem;}
-h2 { font-size: 1.75rem;}
-h3 { font-size: 1.25rem;}
-h4 { font-size: 1rem;}
-h5 { font-size: 1rem;}
-h6 { font-size: 1rem;}
-
 h1 {
   font-family: 'Source Code Pro', monospace;
   font-weight: 700;
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2.75rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 1rem;
 }
 
+
+body {
+  background: $ljl_grey-02;
+  position: relative; // For scrollspy
+
+}
 h2 {
   background: linear-gradient(to right, rgba(255,255,255,0), rgba(255, 255, 255,1)), url('/img/dot.svg') repeat-x;
   padding-top: 30px;
   margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 li {
@@ -132,7 +149,8 @@ $ljl_nav-height: 50px;
 
   .ljl_tagline {
     font-family: 'Courgette', cursive;
-    font-size: 18px;
+    font-size: 1.3rem;
+    padding-top: 0.4rem;
   }
 
   .ljl_email {
