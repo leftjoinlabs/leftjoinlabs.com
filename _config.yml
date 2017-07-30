@@ -13,5 +13,5 @@ collections:
 - people
 - model
 - partnerships
-
-
+ignore:
+- bin

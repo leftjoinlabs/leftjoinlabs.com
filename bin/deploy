@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+PROJDIR=$( cd "$(dirname "$0")" ; cd ../ ; pwd -P )
+
+rsync -avhz --delete "$PROJDIR/" sean:leftjoinlabs.com
+
