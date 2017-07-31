@@ -84,6 +84,10 @@ li {
   background: white;
 }
 
+.ljl_email {
+  height: 0.95rem;
+}
+
 // Navbar
 
 $ljl_nav-height: 50px;
@@ -218,18 +222,6 @@ $ljl_nav-height: 50px;
     font-family: 'Courgette', cursive;
     font-size: 1.3rem;
     padding-top: 0.4rem;
-  }
-
-  .ljl_email {
-    padding: 5px;
-    border-radius: 5px;
-    color: $ljl_grey-05;
-
-    &:hover {
-      background-color: $ljl_grey-01;
-      color: $ljl_grey-05;
-      text-decoration: none;
-    }
   }
 
 }
