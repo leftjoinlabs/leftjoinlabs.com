@@ -10,6 +10,3 @@ I've been using, administering, and customizing CiviCRM since 2008 when I set up
 For seven years I was their do-all IT person and worked heavily with CiviCRM.
 In 2017 I shifted focus to CiviCRM *development*.
 When I'm not coding, I enjoy: mountain biking, trail running, open water swimming, rock climbing, and woodworking.
-
-* [Mattermost](https://chat.civicrm.org/): `@seanmadsen`
-* GitHub: [`@seanmadsen`](https://github.com/seanmadsen)
